@@ -24,16 +24,16 @@ var contexto = canvas.getContext('2d');
 TOTAL_IMAGENS = 4;
 imagensCarregadas = 0;
 imgEspaco = new Image();
-imgEspaco.src = 'img/cenario.png';
+imgEspaco.src = './img/cenario.png';
 imgEspaco.onload = verificaCarregamento;
 imgNave = new Image();
-imgNave.src = "img/nave.png";
+imgNave.src = "./img/nave.png";
 imgNave.onload = verificaCarregamento;
 imgInimigo = new Image();
-imgInimigo.src = "img/inimigo.png";
+imgInimigo.src = "./img/inimigo.png";
 imgInimigo.onload = verificaCarregamento;
 imgExplosao = new Image();
-imgExplosao.src = "img/explosao.png";
+imgExplosao.src = "./img/explosao.png";
 imgExplosao.onload = verificaCarregamento;
 
 
@@ -78,7 +78,7 @@ imagensCarregadas++;
 
 var tamanhoBarra = imagensCarregadas / TOTAL_IMAGENS;
 contexto.fillStyle = 'yellow';
-contexto.fillRect(100, 250, tamanhoBarra (300, 50);
+contexto.fillRect(100, 250, tamanhoBarra (300, 50));
 contexto.restore();
 //alert(tamanhoBarra);
 if (imagensCarregadas == TOTAL_IMAGENS) {
@@ -128,7 +128,7 @@ setInterval(criarInimigo, 2000);
 
 if (loop.rodando) {
 var deslocamento = Math.floor( 1 + Math.random() * 5);
-var x = Math.floor(Math.random() * (canvas.width –
+var x = Math.floor(Math.random() * (canvas.width -
 imgInimigo.width + 1) );
 
 var y = -imgInimigo.height;
